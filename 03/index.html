@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>03. On col·locar javascript.</title>
+  <script type="text/javascript">
+    //Comentari de Javascript en una sola línia.
+
+    /* Comentari
+    de Javascript
+    en més d'una línia
+    */
+
+    /* OBSERVACIONS:
+
+    1. Lo de posar l'atribut type="text/javascript" en html5 no cal.
+
+    2. El navegador executa de dalt a baix la pàgina.
+
+    3. Els javascripts tant els podem posar entre etiquetes script, ja sigui al head, al body o per darrera del body, com a un arxiu extern.
+
+    4. El fluxe d'execució de la pàgina és de dalt a baix. Això significa que en aquest cas, com que aquest bloc de codi està entre etiquetes script al head s'executarà abans que es carregui la pàgina.
+    */
+
+    // alert("Què tal?");
+
+
+
+    /*
+      5. Si accedim a la pàgina al navegador veurem que es carrega una finestra amb el text "Què tal?" però no es carrega el contingut de body encara. S'interromp el fluxe.Això succeeix per dues raons: a) La primera perquè, tal i com hem dit, aquest codi javascript està col·locat al head, per tant abans de la etiqueta body. b) I la segona raó és per la finestra que s'obra és una finestra de tipus "MODAL", és a dir que es carrega en primer pla i no deixen manipular el que hi ha en segon pla. I per altra banda aquest tipus de finestres detenen el fluxe d'execució de renderitzat de la pàgina.
+    */
+
+
+  </script>
+</head>
+<body>
+
+  <main>
+    <header><h1>Títol de la pàgina</h1> </header>
+    <section><article>Text que posem de prova.</article></section>
+  </main>
+
+
+</body>
+
+
+<script type="text/javascript">
+  alert("segona finestra modal");
+/*
+6. Si posem, en canvi, la finestra modal aquí en teoria es carregarà la pàgina abans i després apareixerà la finestra modal. Tot i així al meu google chrome no es carrega la pàgina fins que no ha desaparegut la finestra modal d'alert.
+*/
+
+
+</script>
+</html>
