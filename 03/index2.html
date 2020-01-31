@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript en arxiu extern</title>
+  <script src="extern.js"></script>
+  <!-- Exemple d'ubicació d'script a un arxiu extern -->
+
+
+
+
+</head>
+<body>
+
+</body>
+<!-- Enllaç a un javascript extern que està situat a un CDN. Per enllaçar amb aquest arxiu cal tenir connexió a Internet. -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+$(function(){
+
+  $("body").hide().fadeIn(6000);
+
+});
+
+  </script>
+</html>
